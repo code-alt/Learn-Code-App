@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-app.get('*', (req,res)=>{ // I don't know if this will even work
+app.get('*', (req,res)=>{ 
     if (require('fs').existsSync(__dirname + req.path)) {
         res.sendFile(req.path);
     } else {
