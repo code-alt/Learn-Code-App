@@ -3,7 +3,7 @@ const app = express();
 
 app.get('*', (req,res)=>{ 
     if (require('fs').existsSync(__dirname + req.path)) {
-        res.sendFile(req.path);
+        res.sendFile(__dirname + req.path);
     } else {
         req.statusCode('404');
         res.sendFile(__dirname + "/static/404/");
