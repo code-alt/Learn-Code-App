@@ -1,0 +1,27 @@
+{
+  "name": "learn-code-app",
+  "version": "6.0.0",
+  "description": "Learn Code is the best place to learn programming and test code!",
+  "main": "main.js",
+  "scripts": {
+    "start": "nano main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Learn-Code-App/Learn-Code-App.git"
+  },
+  "keywords": [
+    "learn",
+    "code"
+  ],
+  "author": "Learn Code App",
+  "license": "CC-BY-SA-4.0",
+  "bugs": {
+    "url": "https://github.com/Learn-Code-App/Learn-Code-App/issues"
+  },
+  "homepage": "https://github.com/Learn-Code-App/Learn-Code-App#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
