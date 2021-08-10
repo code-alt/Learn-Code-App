@@ -16,19 +16,25 @@
         opacity: 0;
         z-index: 100000000;
       }
+      @media (max-width: 800px) {
+        img {
+          width: 85%;
+        }
+      }
     </style>
     <title>Learn Code - 404</title>
     <style id="bsty"></style>
 <link
       rel="stylesheet"
       href="/style.css"
-      onload="if(localStorage.getItem('darkMode')){document.getElementById('bsty').innerText='.title:after{background:transparent !important;}';document.body.style='color:#20FF1D;background:black;';document.getElementById('step').style='color:#20FF1D;background:black;border-color: currentColor;';document.getElementById('darkbg1').style.opacity=1;document.getElementById('t').style.background='black';}"
+      onload="if(localStorage.getItem('darkMode')){document.getElementById('bsty').innerText='.title:after{background:transparent !important;}';document.body.style='color:#20FF1D;background:black;';document.getElementById('step').style='color:#20FF1D;background:black;border-color: currentColor;';document.getElementById('darkbg1').style.opacity=1;document.getElementById('t').style.background='black';document.getElementById('img').src='/images/404dark.svg'}"
       defer
 />
 </head>
 <body>
-    <div style="text-align: center;align-items: center;">
+    <div style="text-align: center;align-items: center;margin-top: -100px;">
     <!-- image -->
+    <img src="/images/404.svg" width="30%" id="img" onload="if(localStorage.getItem('darkMode')){document.getElementById('img').src='/images/404dark.svg'}">
     <h1>It's a 404!</h1><br><br><p>Let's get you back. You can go to the <a href="javascript:history.back();">last page</a> you were on, or go <a href="/">home</a>.</p>
     </div>
 </body>

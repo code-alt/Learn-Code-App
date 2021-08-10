@@ -1,7 +1,7 @@
 @media (max-width:500px) {
   body {
     margin: 0;
-    margin-top: 2em;
+    margin-top: 1.5em;
   }
   .bar {
     display:none;
@@ -34,7 +34,6 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  margin: 2em;
   margin-top: 10em;
   background: white;
 }
@@ -81,6 +80,8 @@ h2,p,h1,h3,h4,h5,h6,label,option,div,.step {
   display: inline-block;
   background: white;
   transition: 0.75s;
+  min-width: 150px;
+  min-width: auto;
 }
 
 .title2:before {

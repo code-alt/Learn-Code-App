@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--   style sheets to add before the app loads   -->
+  <style></style>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Learn Code is an app where you can build the apps of your dreams!" />
+  <style>
+    #darkbg1,
+    #darkbg2 {
+      opacity: 0;
+      z-index: 100000000;
+    }
+  </style>
+  <title>Learn Code</title>
+  <style id="bsty"></style>
+  <link rel="stylesheet" href="/style.css"
+    onload="if(localStorage.getItem('darkMode')){document.getElementById('bsty').innerText='.title:after{background:transparent !important;}';document.body.style='color:#20FF1D;background:black;';document.getElementById('step').style='color:#20FF1D;background:black;border-color: currentColor;';document.getElementById('darkbg1').style.opacity=1;document.getElementById('darkbg2').style.opacity=1;document.getElementById('t').style.background='black';}"
+    defer />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="prefetch" href="/sitemap" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" defer />
+  <link rel="stylesheet" href="https://unpkg.com/blocks.css/dist/blocks.min.css" />
+  <script src="/script.js" defer></script>
+  <style>
+    .shake {
+      animation: shake 0.5s;
+      animation-timing-function: linear;
+    }
+
+    @keyframes shake {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      25% {
+        transform: rotate(-10deg);
+      }
+
+      50% {
+        transform: rotate(10deg);
+      }
+
+      75% {
+        transform: rotate(-10deg);
+      }
+
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+
+    body {
+      --block-accent-color: #0289ea;
+      transition: 0.75s;
+    }
+
+    .block {
+      font-family: "Roboto", sans-serif;
+    }
+
+    .block:focus:after {
+      transform: translate(0px, 0px);
+    }
+
+    .block:focus {
+      transform: translate(0px, 0px);
+    }
+
+    .block:focus:before {
+      transform: translate(0px, 0px);
+    }
+
+    @media (max-width: 700px) {
+      .bgimg {
+        display: none;
+      }
+
+      .title2 {
+        color: #20FF1D !important;
+        opacity: 0;
+      }
+    }
+
+    .title2 {
+      border-radius: 10px;
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="frame">
+    <div class="bgimg front" style="top:198px;left:0;" id="darkbg1">
+      <svg width="275" height="272" viewbox="0 0 275 272" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M0 8.14371L109.499 2.40449C129.23 1.37035 142.233 22.6436 132.315 39.7315C127.864 47.4001 119.668 52.1198 110.801 52.1198H103.769C93.9572 52.1198 84.835 57.1666 79.6219 65.4793L67.7707 84.3769C61.0204 95.1407 68.7576 109.126 81.463 109.126C90.389 109.126 97.625 116.362 97.625 125.288V127.042C97.625 136.937 89.6037 144.958 79.7088 144.958H60.2401C55.0955 144.958 50.1322 146.859 46.3032 150.295C32.2038 162.947 40.9008 186.327 59.8415 186.689L162.496 188.65C172.118 188.834 181.38 192.342 188.709 198.578C218.237 223.702 200.47 272 161.7 272H0V8.14371Z"
+          fill="#20FF1D" />
+      </svg>
+    </div>
+    <div class="bgimg front" style="top:150px;right:0;" id="darkbg2">
+      <svg width="217" height="452" viewbox="0 0 217 452" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="15" cy="15" r="15" fill="#20FF1D" />
+        <circle cx="15" cy="56" r="15" fill="#20FF1D" />
+        <circle cx="195" cy="15" r="15" fill="#20FF1D" />
+        <circle cx="195" cy="56" r="15" fill="#20FF1D" />
+        <circle cx="107" cy="15" r="15" fill="#20FF1D" />
+        <circle cx="107" cy="56" r="15" fill="#20FF1D" />
+        <circle cx="61" cy="15" r="15" fill="#20FF1D" />
+        <circle cx="61" cy="56" r="15" fill="#20FF1D" />
+        <circle cx="151" cy="15" r="15" fill="#20FF1D" />
+        <circle cx="151" cy="56" r="15" fill="#20FF1D" />
+        <ellipse cx="15" cy="216.732" rx="15" ry="14.6447" fill="#20FF1D" />
+        <ellipse cx="15" cy="256.761" rx="15" ry="14.6447" fill="#20FF1D" />
+        <ellipse cx="195" cy="96.6447" rx="15" ry="14.6447" fill="#20FF1D" />
+        <ellipse cx="107" cy="136.674" rx="15" ry="14.6447" fill="#20FF1D" />
+        <ellipse cx="61" cy="176.703" rx="15" ry="14.6447" fill="#20FF1D" />
+        <ellipse cx="151" cy="96.6447" rx="15" ry="14.6447" fill="#20FF1D" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M6.00012 275C6.12088 185.173 97.8275 110.91 217 98.7456V275H6.00012Z" fill="black" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M117.683 125.39C137.497 116.022 159.29 108.675 182.508 103.749C185.196 107.689 189.788 110.285 195 110.285C202.024 110.285 207.92 105.572 209.552 99.2076C212.022 98.8989 214.505 98.617 217 98.3623V451.255C97.7489 439.082 6 364.722 6 274.809C6 272.403 6.06566 270.009 6.19574 267.627C8.66835 269.38 11.7105 270.414 15 270.414C23.2843 270.414 30 263.857 30 255.768C30 247.679 23.2843 241.122 15 241.122C13.3137 241.122 11.6923 241.394 10.1794 241.895C11.1832 237.993 12.3622 234.136 13.7102 230.329C14.1354 230.364 14.5655 230.382 15 230.382C23.2843 230.382 30 223.825 30 215.736C30 211.605 28.2485 207.874 25.431 205.211C31.1769 195.391 38.1019 186.022 46.077 177.197C46.8433 184.585 53.2321 190.35 61 190.35C69.2843 190.35 76 183.793 76 175.704C76 168.091 70.051 161.835 62.4444 161.125C71.5382 153.166 81.5678 145.792 92.4105 139.089C93.9872 145.529 99.9209 150.318 107 150.318C115.284 150.318 122 143.76 122 135.672C122 131.665 120.352 128.035 117.683 125.39Z"
+          fill="#20FF1D" />
+        <ellipse cx="15" cy="96.6447" rx="15" ry="14.6447" fill="#20FF1D" />
+        <ellipse cx="15" cy="136.674" rx="15" ry="14.6447" fill="#20FF1D" />
+        <ellipse cx="15" cy="176.703" rx="15" ry="14.6447" fill="#20FF1D" />
+        <ellipse cx="195" cy="136.674" rx="15" ry="14.6447" fill="black" />
+        <ellipse cx="195" cy="176.703" rx="15" ry="14.6447" fill="black" />
+        <ellipse cx="195" cy="216.732" rx="15" ry="14.6447" fill="black" />
+        <ellipse cx="195" cy="256.761" rx="15" ry="14.6447" fill="black" />
+        <ellipse cx="107" cy="96.6447" rx="15" ry="14.6447" fill="#20FF1D" />
+        <ellipse cx="107" cy="176.703" rx="15" ry="14.6447" fill="black" />
+        <ellipse cx="107" cy="216.732" rx="15" ry="14.6447" fill="black" />
+        <ellipse cx="107" cy="256.761" rx="15" ry="14.6447" fill="black" />
+        <ellipse cx="61" cy="96.6447" rx="15" ry="14.6447" fill="#20FF1D" />
+        <ellipse cx="61" cy="136.674" rx="15" ry="14.6447" fill="#20FF1D" />
+        <ellipse cx="61" cy="216.732" rx="15" ry="14.6447" fill="black" />
+        <ellipse cx="61" cy="256.761" rx="15" ry="14.6447" fill="black" />
+        <ellipse cx="151" cy="136.674" rx="15" ry="14.6447" fill="black" />
+        <ellipse cx="151" cy="176.703" rx="15" ry="14.6447" fill="black" />
+        <ellipse cx="151" cy="216.732" rx="15" ry="14.6447" fill="black" />
+        <ellipse cx="151" cy="256.761" rx="15" ry="14.6447" fill="black" />
+      </svg>
+    </div>
+    <div class="bgimg" style="top:200px;left:0;" id="bg1">
+      <svg width="204" height="270" viewbox="0 0 204 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M0 6.14371L109.499 0.404489C129.23 -0.629647 142.233 20.6436 132.315 37.7315V37.7315C127.864 45.4001 119.668 50.1198 110.801 50.1198H103.769C93.9572 50.1198 84.835 55.1666 79.6219 63.4793L67.7707 82.3769C61.0204 93.1407 68.7576 107.126 81.463 107.126V107.126C90.389 107.126 97.625 114.362 97.625 123.288V125.042C97.625 134.937 89.6037 142.958 79.7088 142.958H60.2401C55.0955 142.958 50.1322 144.859 46.3032 148.295V148.295C32.2038 160.947 40.9008 184.327 59.8415 184.689L162.496 186.65C172.118 186.834 181.38 190.342 188.709 196.578V196.578C218.237 221.702 200.47 270 161.7 270H0V6.14371Z"
+          fill="#CAF5FF" />
+      </svg>
+    </div>
+    <div class="bgimg" style="top:150px; right:0;" id="bg2">
+      <svg width="217" height="452" viewbox="0 0 217 452" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="15" cy="15" r="15" fill="#FFADF2" />
+        <circle cx="15" cy="56" r="15" fill="#FFADF2" />
+        <circle cx="195" cy="15" r="15" fill="#FFADF2" />
+        <circle cx="195" cy="56" r="15" fill="#FFADF2" />
+        <circle cx="107" cy="15" r="15" fill="#FFADF2" />
+        <circle cx="107" cy="56" r="15" fill="#FFADF2" />
+        <circle cx="61" cy="15" r="15" fill="#FFADF2" />
+        <circle cx="61" cy="56" r="15" fill="#FFADF2" />
+        <circle cx="151" cy="15" r="15" fill="#FFADF2" />
+        <circle cx="151" cy="56" r="15" fill="#FFADF2" />
+        <ellipse cx="15" cy="216.732" rx="15" ry="14.6447" fill="#FFADF2" />
+        <ellipse cx="15" cy="256.761" rx="15" ry="14.6447" fill="#FFADF2" />
+        <ellipse cx="195" cy="96.6447" rx="15" ry="14.6447" fill="#FFADF2" />
+        <ellipse cx="107" cy="136.674" rx="15" ry="14.6447" fill="#FFADF2" />
+        <ellipse cx="61" cy="176.703" rx="15" ry="14.6447" fill="#FFADF2" />
+        <ellipse cx="151" cy="96.6447" rx="15" ry="14.6447" fill="#FFADF2" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M6.00012 275C6.12088 185.173 97.8275 110.91 217 98.7456V275H6.00012Z" fill="#FAFF00" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M117.683 125.39C137.497 116.022 159.29 108.675 182.508 103.749C185.196 107.689 189.788 110.285 195 110.285C202.024 110.285 207.92 105.572 209.552 99.2076C212.022 98.8989 214.505 98.617 217 98.3623V451.255C97.7489 439.082 6 364.722 6 274.809C6 272.403 6.06566 270.009 6.19574 267.627C8.66835 269.38 11.7105 270.414 15 270.414C23.2843 270.414 30 263.857 30 255.768C30 247.679 23.2843 241.122 15 241.122C13.3137 241.122 11.6923 241.394 10.1794 241.895C11.1832 237.993 12.3622 234.136 13.7102 230.329C14.1354 230.364 14.5655 230.382 15 230.382C23.2843 230.382 30 223.825 30 215.736C30 211.605 28.2485 207.874 25.431 205.211C31.1769 195.391 38.1019 186.022 46.077 177.197C46.8433 184.585 53.2321 190.35 61 190.35C69.2843 190.35 76 183.793 76 175.704C76 168.091 70.051 161.835 62.4444 161.125C71.5382 153.166 81.5678 145.792 92.4105 139.089C93.9872 145.529 99.9209 150.318 107 150.318C115.284 150.318 122 143.76 122 135.672C122 131.665 120.352 128.035 117.683 125.39Z"
+          fill="#FFADF2" />
+        <ellipse cx="15" cy="96.6447" rx="15" ry="14.6447" fill="#FFADF2" />
+        <ellipse cx="15" cy="136.674" rx="15" ry="14.6447" fill="#FFADF2" />
+        <ellipse cx="15" cy="176.703" rx="15" ry="14.6447" fill="#FFADF2" />
+        <ellipse cx="195" cy="136.674" rx="15" ry="14.6447" fill="#FAFF00" />
+        <ellipse cx="195" cy="176.703" rx="15" ry="14.6447" fill="#FAFF00" />
+        <ellipse cx="195" cy="216.732" rx="15" ry="14.6447" fill="#FAFF00" />
+        <ellipse cx="195" cy="256.761" rx="15" ry="14.6447" fill="#FAFF00" />
+        <ellipse cx="107" cy="96.6447" rx="15" ry="14.6447" fill="#FFADF2" />
+        <ellipse cx="107" cy="176.703" rx="15" ry="14.6447" fill="#FAFF00" />
+        <ellipse cx="107" cy="216.732" rx="15" ry="14.6447" fill="#FAFF00" />
+        <ellipse cx="107" cy="256.761" rx="15" ry="14.6447" fill="#FAFF00" />
+        <ellipse cx="61" cy="96.6447" rx="15" ry="14.6447" fill="#FFADF2" />
+        <ellipse cx="61" cy="136.674" rx="15" ry="14.6447" fill="#FFADF2" />
+        <ellipse cx="61" cy="216.732" rx="15" ry="14.6447" fill="#FAFF00" />
+        <ellipse cx="61" cy="256.761" rx="15" ry="14.6447" fill="#FAFF00" />
+        <ellipse cx="151" cy="136.674" rx="15" ry="14.6447" fill="#FAFF00" />
+        <ellipse cx="151" cy="176.703" rx="15" ry="14.6447" fill="#FAFF00" />
+        <ellipse cx="151" cy="216.732" rx="15" ry="14.6447" fill="#FAFF00" />
+        <ellipse cx="151" cy="256.761" rx="15" ry="14.6447" fill="#FAFF00" />
+      </svg>
+    </div>
+    <h1 style="font-size: 50px;">Welcome to the Sitemap</h1>
+    <div class="step" id="step">
+      <h1>Here you can find links to all other pages on the site!</h1>
+      <div><br /><br /><button style="display:inline;" class="block"
+        onclick='window.location="/";this.blur();this.style="display:inline-block;animation:shake 0.5s infinite;animation-timing-function:linear"'>Home</button><br /><button
+          style="display:inline;" class="block accent">Sitemap</button><br /><button style="display:inline;"
+          class="block"
+          onclick='window.location="https://forum.learn-code.me/";this.blur();this.style="display:inline-block;animation:shake 0.5s infinite;animation-timing-function:linear"' >Forum</button>
+        <div>
+        </div>
+</body>
+
+</html>
