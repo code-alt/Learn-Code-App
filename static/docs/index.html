@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <!--   style sheets to add before the app loads   -->
   <style></style>
   <meta charset="utf-8" />
@@ -18,7 +19,7 @@
   <title>Learn Code</title>
   <style id="bsty"></style>
   <link rel="stylesheet" href="/style.css"
-    onload="if(localStorage.getItem('darkMode')){document.getElementById('bsty').innerText='.title:after{background:transparent !important;}';document.body.style='color:#20FF1D;background:black;';document.getElementById('step').style='color:#20FF1D;background:black;border-color: currentColor;';document.getElementById('darkbg1').style.opacity=1;document.getElementById('darkbg2').style.opacity=1;document.getElementById('t').style.background='black';}"
+    onload="if(localStorage.getItem('darkMode')){document.getElementById('bsty').innerText='.title:after{background:transparent !important;}';document.body.style='color:#20FF1D;background:black;';document.getElementById('step2').style='position:fixed;left:0px;top:0px;height:100%;width:300px;padding: 20px;transition: 0.75s;min-width: 150px;min-width: auto;background:black;border-right-width: 2px;border-right-style: solid;border-color:#20FF1D;';document.getElementById('darkbg1').style.opacity=1;document.getElementById('darkbg2').style.opacity=1;document.getElementById('t').style.background='black';}"
     defer />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link rel="prefetch" href="/sitemap" />
@@ -26,6 +27,7 @@
   <link rel="stylesheet" href="https://unpkg.com/blocks.css/dist/blocks.min.css" />
   <script src="/script.js" defer></script>
   <style>
+    #buttons {display:none}
     .shake {
       animation: shake 0.5s;
       animation-timing-function: linear;
@@ -78,17 +80,30 @@
       .bgimg {
         display: none;
       }
-
       .title2 {
         color: #20FF1D !important;
         opacity: 0;
       }
+    }
+    @media (max-width: 1300px) {
+      #step2 {display:none;}
+      #buttons {display:block;}
     }
 
     .title2 {
       border-radius: 10px;
       display: inline-block;
     }
+    #darkbg1,
+      #darkbg2 {
+        opacity: 0;
+        z-index: 100000000;
+      }
+      @media (max-width: 600px) {
+        img {
+          width: 75%;
+        }
+      }
   </style>
 </head>
 
@@ -100,9 +115,7 @@
           d="M0 8.14371L109.499 2.40449C129.23 1.37035 142.233 22.6436 132.315 39.7315C127.864 47.4001 119.668 52.1198 110.801 52.1198H103.769C93.9572 52.1198 84.835 57.1666 79.6219 65.4793L67.7707 84.3769C61.0204 95.1407 68.7576 109.126 81.463 109.126C90.389 109.126 97.625 116.362 97.625 125.288V127.042C97.625 136.937 89.6037 144.958 79.7088 144.958H60.2401C55.0955 144.958 50.1322 146.859 46.3032 150.295C32.2038 162.947 40.9008 186.327 59.8415 186.689L162.496 188.65C172.118 188.834 181.38 192.342 188.709 198.578C218.237 223.702 200.47 272 161.7 272H0V8.14371Z"
           fill="#20FF1D" />
       </svg>
-    
-    
-      </div>
+    </div>
     <div class="bgimg front" style="top:150px;right:0;" id="darkbg2">
       <svg width="217" height="452" viewbox="0 0 217 452" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="15" cy="15" r="15" fill="#20FF1D" />
@@ -146,14 +159,14 @@
         <ellipse cx="151" cy="216.732" rx="15" ry="14.6447" fill="black" />
         <ellipse cx="151" cy="256.761" rx="15" ry="14.6447" fill="black" />
       </svg>
-      </div>
+    </div>
     <div class="bgimg" style="top:200px;left:0;" id="bg1">
       <svg width="204" height="270" viewbox="0 0 204 270" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M0 6.14371L109.499 0.404489C129.23 -0.629647 142.233 20.6436 132.315 37.7315V37.7315C127.864 45.4001 119.668 50.1198 110.801 50.1198H103.769C93.9572 50.1198 84.835 55.1666 79.6219 63.4793L67.7707 82.3769C61.0204 93.1407 68.7576 107.126 81.463 107.126V107.126C90.389 107.126 97.625 114.362 97.625 123.288V125.042C97.625 134.937 89.6037 142.958 79.7088 142.958H60.2401C55.0955 142.958 50.1322 144.859 46.3032 148.295V148.295C32.2038 160.947 40.9008 184.327 59.8415 184.689L162.496 186.65C172.118 186.834 181.38 190.342 188.709 196.578V196.578C218.237 221.702 200.47 270 161.7 270H0V6.14371Z"
           fill="#CAF5FF" />
       </svg>
-      </div>
+    </div>
     <div class="bgimg" style="top:150px; right:0;" id="bg2">
       <svg width="217" height="452" viewbox="0 0 217 452" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="15" cy="15" r="15" fill="#FFADF2" />
@@ -197,13 +210,12 @@
         <ellipse cx="151" cy="216.732" rx="15" ry="14.6447" fill="#FAFF00" />
         <ellipse cx="151" cy="256.761" rx="15" ry="14.6447" fill="#FAFF00" />
       </svg>
-      </div>
-    <div class="step" id="step">
+    </div><main>
       <noscript><h4>*Hey you, yes you! We've noticed you aren't using JavaScript. You'll need JavaScript on to go onto the editor or <br>any other Learn Code sites.</h4></noscript>
-      <h1>Welcome to the Learn Code Helpdesk</h1><br /><br /><h2>Here, you can create a ticket.</h2>
-      <hr><button class="block accent" style="display:inline" onclick="window.location='/helpdesk/ticket/new';">Create a Ticket</button>
-    </div>
-  </div>
+    <h1>Welcome to the Learn Code Guide</h1><h3>Here, you can find access to the HTML, CSS, and JS Docs!</h3><br />
+    <div id="buttons"><button class="block" style="display:inline;position: relative;">HTML Docs</button><br><button class="block" style="display:inline;position: relative;">CSS Docs</button><br><button class="block" style="display:inline;position: relative;">JS Docs</button><br><button style="display:inline;" onclick="window.location='/sitemap';" class="block accent">Sitemap</button></div><br />
+    <img src="/images/lightmode.svg" width="30%" id="img" onload="if(localStorage.getItem('darkMode')){document.getElementById('img').src='/images/darkmode.svg'}">
+    </main>
+    <div id="step2" style="position:fixed;left:0px;top:0px;height:100%;width:300px;padding: 20px;transition: 0.75s;min-width: 150px;min-width: auto;background:white;border-right-width: 2px;border-right-style: solid;"><h2>Learn Code Guide Pages</h2><div><button class="block" style="display:inline;position: relative;">HTML Docs</button><br><button class="block" style="display:inline;position: relative;">CSS Docs</button><br><button class="block" style="display:inline;position: relative;">JS Docs</button></div><button style="display:inline;" onclick="window.location='/sitemap';" class="block accent">Sitemap</button></div></div>
 </body>
-
 </html>
