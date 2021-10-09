@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Urbanist";
+  src: url("/resources/fonts/Urbanist-Regular.ttf");
+}
+
 @media (max-width:500px) {
   body {
     margin: 0;
@@ -33,13 +38,13 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Urbanist", sans-serif;
   margin-top: 10em;
   background: white;
 }
 
 .title {
-  font-family: "Roboto", sans-serif;
+  font-family: "Urbanist", sans-serif;
   text-align: center;
   font-size: 80px;
 }
@@ -91,7 +96,7 @@ h2,p,h1,h3,h4,h5,h6,label,option,div,.step {
   position:relative;
   text-align:center;
   z-index:-1;
-  font-size:80px;top:-201.5px;
+  font-size:80px;top:-203px;
   color:#20FF1D;
 }
 .title2:after {
@@ -107,3 +112,9 @@ a {
   color:#1e6ffc;
   text-decoration:none;
 }
+
+body {
+  font-family: "Urbanist";
+}
+
+.block{font-family: "Urbanist" !important;}
